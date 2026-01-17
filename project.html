@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project – Nome Progetto</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #000;
+      --card: #0b0b0b;
+      --border: #1f1f1f;
+      --text: #fff;
+      --muted: #a1a1aa;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: Inter, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    img, iframe {
+      max-width: 100%;
+      display: block;
+      border-radius: 10px;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 72px 24px;
+    }
+
+    section { margin-top: 96px; }
+
+    h1, h2, h3 { font-weight: 500; }
+
+    h1 {
+      font-size: clamp(2.2rem, 5vw, 3.2rem);
+      letter-spacing: -0.03em;
+    }
+
+    h2 {
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    /* ================= TOP BAR ================= */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(0,0,0,.85);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .topbar {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 14px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 500;
+    }
+
+    .logo img { width: 28px; }
+
+    nav a {
+      margin-left: 20px;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    nav a:hover { color: var(--text); }
+
+    /* ================= HERO ================= */
+    .project-hero {
+      display: grid;
+      gap: 32px;
+    }
+
+    .project-meta {
+      display: flex;
+      gap: 24px;
+      margin-top: 12px;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .project-media img,
+    .project-media iframe {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border-radius: 14px;
+    }
+
+    /* ================= SPLIT SECTIONS ================= */
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .split.reverse {
+      grid-template-columns: 1fr 1fr;
+      direction: rtl;
+    }
+
+    .split.reverse > * {
+      direction: ltr;
+    }
+
+    @media (max-width: 768px) {
+      .split {
+        grid-template-columns: 1fr;
+      }
+      .split.reverse {
+        direction: ltr;
+      }
+    }
+
+    /* ================= INFO BOX ================= */
+    .info-box {
+      border: 1px solid var(--border);
+      background: var(--card);
+      border-radius: 14px;
+      padding: 20px;
+      display: grid;
+      gap: 12px;
+      font-size: 0.85rem;
+    }
+
+    .info-box span {
+      color: var(--muted);
+    }
+
+    /* ================= FOOTER ================= */
+    footer {
+      margin-top: 120px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: .75rem;
+      color: var(--muted);
+    }
+
+    .socials {
+      display: flex;
+      gap: 14px;
+    }
+
+    .socials img {
+      width: 18px;
+      opacity: .6;
+    }
+
+    .socials img:hover { opacity: 1; }
+
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="topbar">
+    <div class="logo">
+      <img src="images/logo.png">
+      <span>Nome Cognome</span>
+    </div>
+
+    <nav>
+      <a href="index.html">← Torna ai progetti</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- PROJECT HERO -->
+  <section class="project-hero">
+    <div>
+      <h1>Nome Progetto</h1>
+      <p style="margin-top:12px">
+        Breve descrizione del progetto, cosa fa e perché esiste.
+      </p>
+
+      <div class="project-meta">
+        <span>🧠 Ruolo: Developer</span>
+        <span>⚙️ Stack: JS / Unity</span>
+        <span>📅 2024</span>
+      </div>
+    </div>
+
+    <div class="project-media">
+      <!-- immagine oppure video -->
+      <img src="images/project-hero.png" alt="Project preview">
+      <!--
+      <iframe src="https://www.youtube.com/embed/VIDEO_ID"
+              allowfullscreen></iframe>
+      -->
+    </div>
+  </section>
+
+  <!-- DESCRIPTION -->
+  <section>
+    <h2>Descrizione</h2>
+    <p>
+      Qui spieghi bene cosa hai fatto, perché è interessante,
+      che problemi hai risolto e che tipo di progetto è.
+    </p>
+  </section>
+
+  <!-- SPLIT SECTION -->
+  <section class="split">
+    <div>
+      <h2>Gameplay / Feature / Sistema</h2>
+      <p>
+        Spiega una feature importante.  
+        Qui puoi andare più tecnico se vuoi.
+      </p>
+    </div>
+
+    <img src="images/project-detail-1.png" alt="">
+  </section>
+
+  <!-- SPLIT REVERSE -->
+  <section class="split reverse">
+    <div>
+      <h2>Altro aspetto rilevante</h2>
+      <p>
+        Performance, UX, architettura, scelte di design, ecc.
+      </p>
+    </div>
+
+    <img src="images/project-detail-2.png" alt="">
+  </section>
+
+  <!-- INFO UTILI -->
+  <section>
+    <h2>Info utili</h2>
+
+    <div class="info-box">
+      <div><strong>Repository:</strong> <span>github.com/...</span></div>
+      <div><strong>Demo:</strong> <span>link live</span></div>
+      <div><strong>Piattaforma:</strong> <span>Web / PC</span></div>
+      <div><strong>Stato:</strong> <span>Completato</span></div>
+    </div>
+  </section>
+
+  <footer>
+    <span>© 2026 Nome Cognome</span>
+    <div class="socials">
+      <a href="#"><img src="icons/github.svg"></a>
+      <a href="#"><img src="icons/linkedin.svg"></a>
+      <a href="#"><img src="icons/twitter.svg"></a>
+      <a href="#"><img src="icons/discord.svg"></a>
+    </div>
+  </footer>
+
+</main>
+
+</body>
+</html>
