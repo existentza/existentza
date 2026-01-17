@@ -3,28 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio – Existentz</title>
+    <title>existentza</title>
+
+    <link rel="icon" type="image/png" href="imgs/logo.png" />
 
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index.css" />
   </head>
 
   <body>
     <header>
       <div class="topbar">
         <div class="logo">
-          <img src="images/logo.png" />
-          <span>Nome Cognome</span>
+          <img src="imgs/logo.png" />
+          <span>existentza</span>
         </div>
 
         <nav id="nav">
           <a href="#intro">Intro</a>
-          <a href="#products">Prodotti</a>
-          <a href="#projects">Progetti</a>
-          <a href="#works">Lavori</a>
+          <a href="#works">Past Works</a>
+          <!--<a href="#projects">Projects</a>-->
+          <!--<a href="#products">Products</a>-->
           <a href="#jams">Game Jams</a>
         </nav>
 
@@ -38,28 +40,135 @@
       <!-- INTRO -->
       <section id="intro" class="hero">
         <div>
-          <h1>Nome Cognome</h1>
-          <p style="margin-top: 12px">Creative / Game Developer</p>
+          <h1>existentza</h1>
+          <p style="margin-top: 12px">Game Developer & Junior Web Developer</p>
 
           <div class="hero-meta">
-            <span>🎯 X anni</span>
-            <span>📍 Italia</span>
+            <span>🎯 17</span>
+            <span>📍 Italy</span>
           </div>
 
           <div class="skills">
-            <div class="skill"><img src="icons/js.svg" />JS</div>
-            <div class="skill"><img src="icons/html.svg" />HTML</div>
-            <div class="skill"><img src="icons/css.svg" />CSS</div>
-            <div class="skill"><img src="icons/unity.svg" />Unity</div>
+            <div class="skill"><img src="imgs/luau.svg" />Luau</div>
+            <div class="skill"><img src="imgs/javascript.svg" />JavaScript</div>
+            <div class="skill"><img src="imgs/html5.svg" />HTML</div>
+            <div class="skill"><img src="imgs/css.svg" />CSS</div>
+            <div class="skill"><img src="imgs/react.svg" />React</div>
+            <div class="skill"><img src="imgs/cplusplus.svg" />C++</div>
+            <div class="skill"><img src="imgs/python.svg" />Python</div>
+            <div class="skill"><img src="imgs/blender.svg" />Blender</div>
           </div>
         </div>
 
-        <img src="images/logo.png" />
+        <img src="imgs/full_logo.png" />
+        <a
+          href="https://discord.com/users/1170828730013323314"
+          class="skill"
+          target="_blank"
+          ><img src="imgs/discord.svg" />Hire Me <---</a
+        >
       </section>
 
-      <!-- PRODUCTS -->
+      <!-- WORKS -->
+      <section id="works">
+        <h2>Past Works</h2>
+
+        <div class="filters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="roblox">Roblox</button>
+          <!--<button class="filter-btn" data-filter="js">JavaScript</button>-->
+          <button class="filter-btn" data-filter="blender">Blender</button>
+        </div>
+
+        <div class="grid works-grid">
+          <!-- Roblox -->
+          <div class="card video" data-type="roblox">
+            <iframe src="https://www.youtube.com/embed/1Lwm7miHuHE"></iframe>
+            <h3>Party System</h3>
+            <span class="tag">Roblox / Luau</span>
+          </div>
+
+          <div class="card video" data-type="roblox">
+            <iframe src="https://www.youtube.com/embed/-ppbkFwD1cs"></iframe>
+            <h3>Knife System</h3>
+            <span class="tag">Roblox / Luau</span>
+          </div>
+
+          <div class="card video" data-type="roblox">
+            <iframe src="https://www.youtube.com/embed/wPtrgzDhE3w"></iframe>
+            <h3>Server List</h3>
+            <span class="tag">Roblox / Luau</span>
+          </div>
+
+           <div class="card video" data-type="roblox">
+            <iframe src="https://www.youtube.com/embed/BbvWWZvEcvU"></iframe>
+            <h3>Radio System</h3>
+            <span class="tag">Roblox / Luau</span>
+          </div>
+
+          <div class="card video" data-type="roblox">
+            <iframe src="https://www.youtube.com/embed/SZGoDDt6j3c"></iframe>
+            <h3>RNG Game Preset</h3>
+            <span class="tag">Roblox / Luau</span>
+          </div>
+
+          <div class="card video" data-type="roblox">
+            <iframe src="https://www.youtube.com/embed/_Wq_FyXk66w"></iframe>
+            <h3>SCP Menu</h3>
+            <span class="tag">Roblox / Luau</span>
+          </div>
+
+         <div class="card video" data-type="roblox">
+            <iframe src="https://www.youtube.com/embed/R6GnmCKua7E"></iframe>
+            <h3>Feedback System</h3>
+            <span class="tag">Roblox / Luau</span>
+          </div>
+          <!-- JavaScript 
+          <a
+            class="card"
+            data-type="js"
+            href="https://github.com/existentza/ExisDashboard"
+            target="_blank"
+          >
+            <h3>ExisDashboard</h3>
+            <p>Commission dashboard built with HTML, CSS & JS.</p>
+            <span class="tag">JavaScript</span>
+          </a>
+
+          <a
+            class="card"
+            data-type="js"
+            href="https://github.com/existentza/ExisFolio"
+            target="_blank"
+          >
+            <h3>Portfolio Website</h3>
+            <p>This very website.</p>
+            <span class="tag">JavaScript</span>
+          </a>
+        -->
+          <!-- Blender -->
+          <div class="card video" data-type="blender">
+            <iframe src="https://www.youtube.com/embed/zU6s7YXrtFE"></iframe>
+            <h3>Cutscene Animation</h3>
+            <span class="tag">Blender</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS 
+      <section id="projects">
+        <h2>Projects</h2>
+        <div class="grid">
+          <a href="project.html" class="card">
+            <h3>Project Title</h3>
+            <p>Descrizione breve.</p>
+          </a>
+        </div>
+      </section>
+-->
+      <!-- PRODUCTS 
       <section id="products">
-        <h2>Prodotti</h2>
+        <h2>Products</h2>
         <div class="grid">
           <div class="card">
             <div class="product-media">
@@ -68,64 +177,64 @@
             <h3>Nome Prodotto</h3>
             <p class="price">€29</p>
             <a class="buy-btn" href="https://discord.gg/" target="_blank">
-              Acquista su Discord →
+                
+              Purchase on Discord <-
             </a>
           </div>
         </div>
       </section>
+-->
+      <!-- GAME JAMS -->
+      <section id="jams">
+        <h2>Game Jams</h2>
 
-      <!-- PROJECTS -->
-      <section id="projects">
-        <h2>Progetti</h2>
         <div class="grid">
-          <a href="project.html" class="card">
-            <h3>Project Title</h3>
-            <p>Descrizione breve.</p>
+          <a
+            class="card"
+            href="https://devforum.roblox.com/t/vincitori-e-giochi-della-scacchi-game-jam/2474402/1"
+            target="_blank"
+          >
+            <h3>Chess Game Jam</h3>
+            <p>🥇 First Place – Italian Category</p>
+          </a>
+
+          <a
+            class="card"
+            href="https://devforum.roblox.com/t/storytelling-game-jam/3601504/6"
+            target="_blank"
+          >
+            <h3>Storytelling Game Jam</h3>
+            <p>🥇 First Place – Italian Category</p>
+          </a>
+
+          <a
+            class="card"
+            href="https://devforum.roblox.com/t/vincitori-e-giochi-della-game-jam-forze-naturali/2798150/1"
+            target="_blank"
+          >
+            <h3>Natural Forces Jam</h3>
+            <p>🥇 Second Place – Italian Category</p>
           </a>
         </div>
       </section>
 
-      <!-- WORKS -->
-      <section id="works">
-        <h2>Lavori passati</h2>
-
-        <div class="filters">
-          <button class="filter-btn active">Tutti</button>
-          <button class="filter-btn">JavaScript</button>
-          <button class="filter-btn">Unity</button>
-        </div>
-
-        <div class="grid">
-          <div class="card video">
-            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe>
-            <h3>Progetto JS</h3>
-            <span class="tag">JavaScript</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- GAME JAMS -->
-      <section id="jams">
-        <h2>Game Jams</h2>
-        <div class="grid">
-          <div class="card">
-            <img
-              src="images/jam.png"
-              style="border-radius: 8px; margin-bottom: 8px"
-            />
-            <h3>Ludum Dare 50</h3>
-            <p>🏆 12° posto</p>
-          </div>
-        </div>
-      </section>
-
       <footer>
-        <span>© 2026 Nome Cognome</span>
+        <span>© 2026 existentza</span>
         <div class="socials">
-          <a href="#"><img src="icons/github.svg" /></a>
-          <a href="#"><img src="icons/linkedin.svg" /></a>
-          <a href="#"><img src="icons/twitter.svg" /></a>
-          <a href="#"><img src="icons/discord.svg" /></a>
+          <a target="_blank" href="https://github.com/existentza"
+            ><img src="imgs/github.svg"
+          /></a>
+          <a
+            target="_blank"
+            href="https://discord.com/users/1170828730013323314"
+            ><img src="imgs/discord.svg"
+          /></a>
+          <a target="_blank" href="https://x.com/existentza"
+            ><img src="imgs/x.svg"
+          /></a>
+          <a target="_blank" href="https://linktr.ee/existentz"
+            ><img src="imgs/linktree.svg"
+          /></a>
         </div>
       </footer>
     </main>
@@ -149,6 +258,31 @@
         links.forEach((a) =>
           a.classList.toggle("active", a.getAttribute("href") === "#" + current)
         );
+      });
+    </script>
+
+    <script>
+      const filterButtons = document.querySelectorAll(".filter-btn");
+      const workCards = document.querySelectorAll(".works-grid .card");
+
+      filterButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          // active state
+          filterButtons.forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+
+          const filter = btn.dataset.filter;
+
+          workCards.forEach((card) => {
+            const type = card.dataset.type;
+
+            if (filter === "all" || filter === type) {
+              card.classList.remove("hidden");
+            } else {
+              card.classList.add("hidden");
+            }
+          });
+        });
       });
     </script>
   </body>

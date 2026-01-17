@@ -219,6 +219,7 @@ nav a:hover {
 }
 
 .filter-btn {
+  color: rgb(144, 143, 143);
   padding: 6px 12px;
   border-radius: 999px;
   border: 1px solid var(--border);
@@ -272,4 +273,73 @@ footer {
 
 html {
   scroll-behavior: smooth;
+}
+
+/* Works grid – cards NON giganti */
+.works-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.works-grid .card {
+  padding: 14px;
+}
+
+/* Video ratio corretto */
+.card.video iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Filter animation */
+.card {
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.card.hidden {
+    display: none;
+  opacity: 0;
+  transform: scale(0.97);
+  pointer-events: none;
+}
+
+/* ================= SUBTLE HOVER ================= */
+
+.card,
+.skill,
+.filter-btn {
+  transition:
+    transform 0.18s ease,
+    border-color 0.18s ease,
+    background-color 0.18s ease;
+}
+
+/* Card hover */
+.card:hover {
+  transform: translateY(-2px);
+  border-color: #2a2a2a;
+}
+
+/* Skill hover */
+.skill:hover {
+  border-color: #2a2a2a;
+}
+
+/* Filter hover */
+.filter-btn:hover {
+  color: var(--text);
+  border-color: #2a2a2a;
+}
+
+.socials img,
+.skill img {
+  filter: invert(1);
+  opacity: 0.6;
+}
+
+.socials img:hover {
+  opacity: 1;
 }
