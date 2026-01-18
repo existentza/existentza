@@ -275,7 +275,6 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Works grid – cards NON giganti */
 .works-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -286,7 +285,6 @@ html {
   padding: 14px;
 }
 
-/* Video ratio corretto */
 .card.video iframe {
   width: 100%;
   aspect-ratio: 16 / 9;
@@ -294,13 +292,12 @@ html {
   margin-bottom: 10px;
 }
 
-/* Filter animation */
 .card {
   transition: opacity 0.25s ease, transform 0.25s ease;
 }
 
 .card.hidden {
-    display: none;
+  display: none;
   opacity: 0;
   transform: scale(0.97);
   pointer-events: none;
@@ -335,11 +332,19 @@ html {
 }
 
 .socials img,
-.skill img {
+.skills img,
+.ds {
+  width: 18px;
   filter: invert(1);
   opacity: 0.6;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.skills img {
+  opacity: 1;
 }
 
 .socials img:hover {
   opacity: 1;
+  transform: translateY(-2px);
 }
