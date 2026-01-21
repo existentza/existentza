@@ -1,0 +1,715 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daily Rewards System – Product</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/existentza/index.css" />
+     <link rel="stylesheet" href="/existentza/product.css" />
+    
+    <style>
+      :root {
+        --bg: #000;
+        --card: #0b0b0b;
+        --border: #1f1f1f;
+        --text: #fff;
+        --muted: #a1a1aa;
+      }
+
+      .ds {
+        width: 18px;
+        filter: invert(1);
+        opacity: 0.6;
+        transition: opacity 0.2s ease, transform 0.2s ease;
+      }
+      .product-hero {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 48px;
+        align-items: center;
+      }
+
+      .product-hero img {
+        border-radius: 12px;
+        border: 1px solid var(--border);
+      }
+
+      .feature-list {
+        margin-top: 12px;
+        padding-left: 18px;
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      .feature-list li {
+        margin-bottom: 6px;
+      }
+
+      .doc-block {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 16px;
+        margin-top: 16px;
+      }
+
+      .doc-block h3 {
+        font-size: 0.95rem;
+        margin-bottom: 6px;
+      }
+
+    .code-block {
+        margin-top: 10px;
+        background: #050505;
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        padding: 12px;
+        overflow-x: auto;
+        }
+
+        .code-block pre {
+        margin: 0;
+        }
+
+        .code-block code {
+        font-family: monospace;
+        font-size: 0.8rem;
+        color: #e5e5e5;
+        display: block;
+        white-space: pre;
+        line-height: 1.6;     /* 🔥 separazione righe */
+        text-align: left;
+        tab-size: 2;
+        }
+
+      .info-box {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 16px;
+        display: grid;
+        gap: 10px;
+      }
+
+      .info-box div {
+        font-size: 0.9rem;
+      }
+
+      .info-box strong {
+        color: var(--text);
+        margin-right: 8px;
+      }
+
+      .info-box span {
+        color: var(--muted);
+      }
+
+      .warning-box {
+        background: rgba(255, 200, 0, 0.05);
+        border: 1px solid rgba(255, 200, 0, 0.2);
+        border-radius: 12px;
+        padding: 16px;
+        margin-top: 16px;
+        font-size: 0.85rem;
+        color: var(--muted);
+      }
+
+      .warning-box strong {
+        color: #ffc800;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 12px;
+        font-size: 0.85rem;
+      }
+
+      table th,
+      table td {
+        padding: 10px;
+        text-align: left;
+        border-bottom: 1px solid var(--border);
+      }
+
+      table th {
+        color: var(--text);
+        font-weight: 500;
+      }
+
+      table td {
+        color: var(--muted);
+      }
+
+      table code {
+        background: var(--card);
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-size: 0.8rem;
+        color: #e5e5e5;
+      }
+
+      @media (max-width: 768px) {
+        .product-hero {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-tomorrow.min.css"
+    />
+
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/prismjs/prism.min.js"
+    ></script>
+
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-lua.min.js"
+    ></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="topbar">
+        <div class="logo"> 
+          <img src="/existentza/imgs/logo.png" />
+          <span>existentza</span>
+        </div>
+
+        <nav>
+          <a href="/existentza/index.html#products">← Back to products</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <!-- HERO -->
+      <section class="product-hero">
+        <div>
+          <h1>Daily Rewards System</h1>
+          <p style="margin-top: 12px">
+            Complete daily rewards system for Roblox games with streak tracking, multiple reward types, and DataStore persistence.
+          </p>
+
+        <br>
+          <div class="project-meta">
+            <span>🧩 Type: System</span>
+            <span>⚙️ Luau / Roblox</span>
+            <span>📦 Version: 0.1</span>
+          </div>
+        </div>
+
+       
+        <img src="/existentza/p_imgs/daily_rewards/preview.png" alt="Daily Rewards Preview" />
+         <a
+          href="https://discord.com/users/1170828730013323314"
+          class="skill"
+          target="_blank"
+          ><img class="ds" src="imgs/discord.svg" />Purchase the System (29 Euro)</a
+        >
+      </section>
+
+      <!-- DESCRIPTION -->
+      <section>
+        <h2>Description</h2>
+        <p>
+          A fully-featured daily rewards system that allows players to claim rewards each day, 
+          maintaining a 7-day streak cycle. 
+          The system includes DataStore integration for persistent 
+          data, custom UI support, and three reward types: currency, items, and custom callbacks.
+        </p>
+      </section>
+
+      <!-- FEATURES -->
+      <section>
+        <h2>Features</h2>
+        <ul class="feature-list">
+          <li>7-day streak system with automatic reset</li>
+          <li>DataStore integration with Studio mode support</li>
+          <li>Full Documentation | Beginner Friendly</li>
+          <li>Three reward types: Currency, Items, and Custom</li>
+          <li>Pre-built UI with customizable templates</li>
+          <li>Streak tracking and visualization</li>
+          <li>Configurable rewards per day</li>
+          <li>Optional streak enforcement</li>
+          <li>Automatic UI display on player join</li>
+        </ul>
+      </section>
+
+      <!-- INSTALLATION -->
+      <section>
+        <h2>Installation</h2>
+        
+        <div class="doc-block">
+          <h3>Step 1: Setup Structure</h3>
+          <p>Place the system modules in your game hierarchy:</p>
+          
+          <div class="code-block"><code>ServerScriptService
+  └── DailyRewardsSystem (ModuleScript)
+      └── Types (ModuleScript)
+
+ReplicatedStorage
+  └── DailyRewardsRemotes (Folder)
+      ├── OpenUI (RemoteEvent)
+      ├── ClaimReward (RemoteFunction)
+      ├── GetUserData (RemoteFunction)
+      └── GetDailyRewardsInfo (RemoteFunction)
+  └── DailyRewardsItems (Folder)
+      └── [Your reward items here]
+  └── DailyRewardsImages (Folder)
+      └── [ImageLabels for rewards]
+
+StarterGui
+  └── DailyRewardsUI (ScreenGui)
+
+StarterPlayerScripts
+  └── DailyRewardsClient (LocalScript)</code></div>
+        </div>
+
+        <div class="doc-block">
+          <h3>Step 2: Initialize the System</h3>
+          <p>In a server script, initialize the Daily Rewards System:</p>
+          
+         <div class="code-block">
+  <pre><code class="language-lua">
+local ServerScriptService = game:GetService("ServerScriptService")
+local DailyRewardsSystem = require(ServerScriptService.DailyRewardsSystem)
+
+DailyRewardsSystem:Init()
+  </code></pre>
+</div>
+
+      </section>
+
+      <!-- CONFIGURATION -->
+      <section>
+        <h2>Configuration</h2>
+        
+        <div class="doc-block">
+          <h3>Settings Overview</h3>
+          <p>Edit the SETTINGS table in the DailyRewardsSystem module:</p>
+          
+          <div class="code-block"><pre><code class="language-lua">local SETTINGS = {
+    ShowUIOnJoin = true,              -- Show UI when player joins
+    SaveInStudio = true,              -- Enable saving in Studio
+    SeparateDatabaseInStudio = true,  -- Use separate DataStore in Studio
+    StreakEnabled = true,             -- Require consecutive daily logins
+    Items = ReplicatedStorage.DailyRewardsItems,
+    RemotesFolder = ReplicatedStorage.DailyRewardsRemotes,
+    Rewards = {
+        -- Configure rewards here (see below)
+    }
+}</code></pre></div>
+
+          <table>
+            <tr>
+              <th>Setting</th>
+              <th>Type</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td><code>ShowUIOnJoin</code></td>
+              <td>boolean</td>
+              <td>Automatically show the UI when players join</td>
+            </tr>
+            <tr>
+              <td><code>SaveInStudio</code></td>
+              <td>boolean</td>
+              <td>Enable DataStore saving in Studio mode</td>
+            </tr>
+            <tr>
+              <td><code>SeparateDatabaseInStudio</code></td>
+              <td>boolean</td>
+              <td>Use a separate DataStore for Studio testing</td>
+            </tr>
+            <tr>
+              <td><code>StreakEnabled</code></td>
+              <td>boolean</td>
+              <td>Require consecutive daily logins for streaks</td>
+            </tr>
+            <tr>
+              <td><code>Items</code></td>
+              <td>Folder</td>
+              <td>Folder containing reward items (Tools)</td>
+            </tr>
+            <tr>
+              <td><code>RemotesFolder</code></td>
+              <td>Folder</td>
+              <td>Folder containing RemoteEvents/Functions</td>
+            </tr>
+          </table>
+        </div>
+      </section>
+
+      <!-- REWARD TYPES -->
+      <section>
+        <h2>Reward Types</h2>
+        
+        <div class="doc-block">
+          <h3>1. Currency Rewards</h3>
+          <p>Give in-game currency stored in leaderstats or custom folders:</p>
+          
+          <div class="code-block"><pre></preZ><code class="language-lua">Rewards = {
+    [1] = {
+        RewardType = "GiveCurrency",
+        Amount = 100,
+        CurrencyName = "Cash",
+        -- Optional: specify parent folder
+        CurrencyParent = "leaderstats"  -- Default: "leaderstats"
+    }
+}</code></pre></preZ></div>
+          
+          <p style="margin-top: 10px;">The system searches for a NumberValue/IntValue in <code>Player.leaderstats</code> (or custom parent) with the specified <code>CurrencyName</code>.</p>
+        </div>
+
+        <div class="doc-block">
+          <h3>2. Item Rewards</h3>
+          <p>Give tools or items from your Items folder:</p>
+          
+          <div class="code-block"><pre><code class="language-lua">Rewards = {
+    [2] = {
+        RewardType = "GiveItem",
+        ItemName = "Sword",
+        Quantity = 1
+    }
+}</code></pre></div>
+          
+          <p style="margin-top: 10px;">Items are cloned from <code>SETTINGS.Items</code> folder and placed in the player's Backpack.</p>
+        </div>
+
+        <div class="doc-block">
+          <h3>3. Custom Rewards</h3>
+          <p>Execute custom code when a reward is claimed:</p>
+          
+          <div class="code-block"><pre><code class="language-lua">Rewards = {
+    [3] = {
+        RewardType = "Custom",
+        CustomData = {
+            PowerUpName = "SpeedBoost",
+            Duration = 60
+        },
+        Callback = function(Player, CustomData)
+            -- Your custom reward logic
+            print("Giving", CustomData.PowerUpName, "to", Player.Name)
+            
+            -- Return true for success, false for failure
+            return true
+        end
+    }
+}</code></pre></div>
+          
+          <p style="margin-top: 10px;">The callback receives the Player and CustomData table. Return <code>true</code> for success or <code>false</code> if the reward fails.</p>
+        </div>
+
+        <div class="doc-block">
+          <h3>Complete Example Configuration</h3>
+          
+          <div class="code-block"><pre><code class="language-lua">Rewards = {
+    [1] = {
+        RewardType = "GiveCurrency",
+        Amount = 100,
+        CurrencyName = "Cash"
+    },
+    [2] = {
+        RewardType = "GiveItem",
+        ItemName = "Sword",
+        Quantity = 1
+    },
+    [3] = {
+        RewardType = "GiveCurrency",
+        Amount = 10,
+        CurrencyName = "Gems"
+    },
+    [4] = {
+        RewardType = "GiveCurrency",
+        Amount = 200,
+        CurrencyName = "Cash"
+    },
+    [5] = {
+        RewardType = "GiveItem",
+        ItemName = "Magic Carpet",
+        Quantity = 1
+    },
+    [6] = {
+        RewardType = "Custom",
+        CustomData = { XPBoost = 2.0, Duration = 3600 },
+        Callback = function(Player, Data)
+            -- Apply XP boost
+            return true
+        end
+    },
+    [7] = {
+        RewardType = "GiveItem",
+        ItemName = "Speed Coil",
+        Quantity = 1
+    }
+}</code></pre></div>
+        </div>
+      </section>
+
+      <!-- API REFERENCE -->
+      <section>
+        <h2>API Reference</h2>
+        
+        <div class="doc-block">
+          <h3>DailyRewardsSystem:Init()</h3>
+          <p>Initializes the system, connects events, and sets up RemoteFunctions.</p>
+          
+          <div class="code-block"><pre><code class="language-lua">-- Server
+local DailyRewardsSystem = require(ServerScriptService.DailyRewardsSystem)
+DailyRewardsSystem:Init()</code></pre></div>
+        </div>
+
+        <div class="doc-block">
+          <h3>DailyRewardsSystem:GetDailyRewardsData(Player)</h3>
+          <p>Returns the player's daily rewards data from DataStore.</p>
+          
+          <div class="code-block"><pre><code class="language-lua">-- Server
+local data = DailyRewardsSystem:GetDailyRewardsData(player)
+-- Returns: { StreakStart = number, LastClaim = number? }</code></pre></div>
+        </div>
+
+        <div class="doc-block">
+          <h3>DailyRewardsSystem:CanClaimDailyStreak(Player)</h3>
+          <p>Checks if the player can claim their daily reward.</p>
+          
+          <div class="code-block"><pre><code class="language-lua">-- Server
+local canClaim = DailyRewardsSystem:CanClaimDailyStreak(player)
+-- Returns: boolean</code></pre></div>
+        </div>
+
+        <div class="doc-block">
+          <h3>DailyRewardsSystem:GetPlayerStreak(Player)</h3>
+          <p>Returns the player's current streak day (1-7).</p>
+          
+          <div class="code-block"><pre><code class="language-lua">-- Server
+local streakDay = DailyRewardsSystem:GetPlayerStreak(player)
+-- Returns: number (1-7)</code></pre></div>
+        </div>
+
+        <div class="doc-block">
+          <h3>DailyRewardsSystem:ClaimDailyReward(Player)</h3>
+          <p>Processes a reward claim for the player.</p>
+          
+          <div class="code-block"><pre><code class="language-lua">-- Server
+local success, reward, day = DailyRewardsSystem:ClaimDailyReward(player)
+
+if success then
+    print("Claimed day", day, "reward!")
+else
+    warn("Claim failed:", reward)  -- reward contains error message
+end</code></pre></div>
+        </div>
+
+        <div class="doc-block">
+          <h3>DailyRewardsSystem:GetRewardsConfiguration()</h3>
+          <p>Returns the complete rewards configuration table.</p>
+          
+          <div class="code-block"><pre><code class="language-lua">-- Server
+local rewards = DailyRewardsSystem:GetRewardsConfiguration()
+-- Returns: {[number]: Reward}</code></pre></div>
+        </div>
+      </section>
+
+      <!-- CLIENT-SIDE -->
+      <section>
+        <h2>Client-Side Usage</h2>
+        
+        <div class="doc-block">
+          <h3>Opening the UI Manually</h3>
+          <p>Fire the OpenUI remote event from a client script:</p>
+          
+          <div class="code-block"><pre><code class="language-lua">-- Client
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local Remotes = ReplicatedStorage:WaitForChild("DailyRewardsRemotes")
+
+-- Open the daily rewards UI
+Remotes.OpenUI:FireServer()</code></pre></div>
+        </div>
+
+        <div class="doc-block">
+          <h3>Getting User Data</h3>
+          <p>Retrieve the player's current streak information:</p>
+          
+          <div class="code-block"><pre><code class="language-lua">-- Client
+local userData = Remotes.GetUserData:InvokeServer()
+
+print("Current Streak Day:", userData.Streak)
+print("Day to Claim:", userData.ToClaimDay)
+print("Can Claim:", userData.CanClaim)</code></pre></div>
+        </div>
+
+        <div class="doc-block">
+          <h3>Claiming Rewards</h3>
+          <p>Process a reward claim from the client:</p>
+          
+          <div class="code-block"><pre><code class="language-lua">-- Client
+local success, reward, day = Remotes.ClaimReward:InvokeServer()
+
+if success then
+    print("Successfully claimed day", day, "reward!")
+    -- Refresh UI
+else
+    warn("Failed to claim:", reward)
+end</code></pre></div>
+        </div>
+      </section>
+
+      <!-- HOW IT WORKS -->
+      <section>
+        <h2>How It Works</h2>
+        
+        <div class="doc-block">
+          <h3>Streak System</h3>
+          <p>The system tracks player streaks over a 7-day cycle:</p>
+          
+          <ul class="feature-list">
+            <li><strong>Day 1-7:</strong> Players claim rewards in sequence</li>
+            <li><strong>After Day 7:</strong> The cycle restarts at Day 1</li>
+            <li><strong>Missed Days:</strong> If <code>StreakEnabled = true</code>, missing a day resets the streak to Day 1</li>
+            <li><strong>Same Day:</strong> Players cannot claim more than once per day</li>
+          </ul>
+        </div>
+
+        <div class="doc-block">
+          <h3>Data Structure</h3>
+          <p>Player data is stored with the following structure:</p>
+          
+          <div class="code-block"><pre><code class="language-lua">{
+    StreakStart = number,  -- Day number when streak started
+    LastClaim = number?    -- Day number of last claim (nil if never claimed)
+}
+
+-- Day number = math.floor(os.time() / 86400)</code></pre></div>
+        </div>
+
+        <div class="doc-block">
+          <h3>DataStore Keys</h3>
+          <p>Data is saved using the following naming convention:</p>
+          
+          <div class="code-block"><pre><code class="language-lua">-- Production DataStore
+DatabaseID = "DailyRewards"
+Key = "ID-" .. player.UserId
+
+-- Studio DataStore (when SeparateDatabaseInStudio = true)
+DatabaseID = "StudioDailyRewards"
+Key = "ID-" .. player.UserId</code></pre></div>
+
+          <div class="warning-box">
+            <strong>⚠️ Warning:</strong> Do not edit the DatabaseID or DataKey variables unless you know what you're doing. Changing these values can cause data loss or corruption.
+          </div>
+        </div>
+      </section>
+
+      <!-- CUSTOMIZATION -->
+      <section>
+        <h2>Customization</h2>
+        
+        <div class="doc-block">
+          <h3>Custom UI</h3>
+          <p>The system includes a pre-built UI, but you can customize it:</p>
+          
+          <ul class="feature-list">
+            <li>Edit <code>StarterGui.DailyRewardsUI</code> to change the appearance</li>
+            <li>The client script expects: <code>Main.Content</code>, <code>Main.Footer</code>, <code>Main.CloseButton</code></li>
+            <li>Reward templates are cloned from <code>LocalScript.RewardTemplate</code></li>
+            <li>Icons are loaded from <code>ReplicatedStorage.DailyRewardsImages</code></li>
+          </ul>
+        </div>
+
+        <div class="doc-block">
+          <h3>Custom Currency Parents</h3>
+          <p>By default, the system looks for currency in <code>Player.leaderstats</code>. To use a different folder:</p>
+          
+          <div class="code-block"><pre><code class="language-lua">Rewards = {
+    [1] = {
+        RewardType = "GiveCurrency",
+        Amount = 50,
+        CurrencyName = "Tokens",
+        CurrencyParent = "PlayerData"  -- Searches Player.PlayerData.Tokens
+    }
+}</code></pre></div>
+        </div>
+
+        <div class="doc-block">
+          <h3>Disabling Streak Enforcement</h3>
+          <p>Allow players to claim rewards without consecutive logins:</p>
+          
+          <div class="code-block"><pre><code class="language-lua">local SETTINGS = {
+    StreakEnabled = false,  -- Players can claim anytime
+    -- ... other settings
+}</code></pre></div>
+          
+          <p style="margin-top: 10px;">When disabled, players can claim the next reward whenever they want, without losing progress.</p>
+        </div>
+      </section>
+
+      <!-- TROUBLESHOOTING -->
+      <section>
+        <h2>Troubleshooting</h2>
+        
+        <div class="doc-block">
+          <h3>Rewards Not Giving</h3>
+          <p>Check the following:</p>
+          
+          <ul class="feature-list">
+            <li>For currency: Ensure the value exists in <code>Player.leaderstats</code></li>
+            <li>For items: Verify items exist in <code>SETTINGS.Items</code> folder</li>
+            <li>For custom: Check that the callback returns <code>true</code></li>
+            <li>Enable debug prints in <code>Types</code> module: <code>local DebugPrints = true</code></li>
+          </ul>
+        </div>
+
+        <div class="doc-block">
+          <h3>UI Not Showing</h3>
+          <p>Verify the following:</p>
+          
+          <ul class="feature-list">
+            <li><code>ShowUIOnJoin = true</code> in settings</li>
+            <li>All RemoteEvents/Functions exist in <code>RemotesFolder</code></li>
+            <li>UI elements are properly named in StarterGui</li>
+            <li>Client script is in StarterPlayerScripts</li>
+          </ul>
+        </div>
+
+        <div class="doc-block">
+          <h3>Data Not Saving</h3>
+          <p>Common causes:</p>
+          
+          <ul class="feature-list">
+            <li>DataStore API is disabled in Studio settings</li>
+            <li><code>SaveInStudio = false</code> (data is stored temporarily)</li>
+            <li>DataStore write limits reached (1 write per 6 seconds per key)</li>
+            <li>Player left before data could save</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- INFO -->
+      <section>
+        <h2>Product Information</h2>
+        <div class="info-box">
+          <div><strong>Format:</strong> <span>Modular System</span></div>
+          <div><strong>Language:</strong> <span>Luau (Roblox)</span></div>
+          <div><strong>Support:</strong> <span>Discord</span></div>
+          <div><strong>License:</strong> <span>Commercial</span></div>
+          <div><strong>Version:</strong> <span>0.1</span></div>
+          <div><strong>Author:</strong> <span>@existentza</span></div>
+        </div>
+      </section>
+
+      <footer>
+        <span>© 2026 existentza</span>
+      </footer>
+    </main>
+  </body>
+</html>

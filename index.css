@@ -195,7 +195,6 @@ nav a:hover {
 }
 
 .product-media img {
-  aspect-ratio: 16/9;
   border-radius: 8px;
   margin-bottom: 10px;
 }
